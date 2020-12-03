@@ -1,0 +1,29 @@
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<script src="script.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+</head>
+
+<body>
+	<h1>Focus</h1>
+</body>
+<script>
+	setInterval(checkFocus, 100);
+    var audio = new Audio(
+      "https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"
+    );
+    audio.loop = true;
+    function checkFocus() {
+      if (document.hasFocus()) {
+        document.title = "Main Title";
+        audio.pause();
+      } else {
+        document.title = "Title Change";
+        audio.play();
+      }
+    }
+</script>
+
+</html>
